@@ -25,7 +25,7 @@ body, html {
   font-family: 'Libre Baskerville', serif;
   font-size: 16px;
   font-weight: 400;
-  min-width: 320px;
+  min-width: 280px;
   line-height: 1.75em;
 }
 
@@ -64,12 +64,19 @@ h4 {
 
 header {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 2fr;
   height: 20vh;
-  /* padding: 30px; */
-  /* text-align: center; */
   background-color: #727272;
   align-items: center;
+}
+
+@media (max-width: 900px) {
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
 }
 
 .logo {
@@ -97,7 +104,15 @@ header {
   position: absolute;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 750px) {
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 30vh;
+    background-color: #727272;
+    align-items: center;
+  }
 
   .logo {
     margin-left: 1.5em;
@@ -105,7 +120,7 @@ header {
 
   .hero-text {
     font-size: 2.6rem;
-    margin-top: 50vh;
+    margin-top: 40vh;
   }
 
 }
@@ -130,7 +145,13 @@ header {
 
 .nav ul li a {
   color: white;
+  font-weight: bold;
   text-decoration: none;
+}
+
+.nav ul li a:hover {
+  color: var(--orange);
+  text-decoration: solid underline #485D25 6px;
 }
 
 .full-bleed {
@@ -141,6 +162,31 @@ header {
 .full-bleed > * {
   text-align: center;
   padding: 15px;
+}
+
+.titles {
+  font-family: 'Oswald', sans-serif;
+  font-size: 3rem;
+  line-height: 1.5em;
+  text-align: center;
+  color: #b7be51;
+  background-color: #727272;
+  height: 200px;
+  padding: 60px 0;
+}
+
+.titles2 {
+  text-align: center;
+  background-color: #727272;
+  padding: 60px 40px;
+}
+
+.titles2 h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1rem;
+  line-height: 1.8em;
+  text-align: center;
+  color: #cfd394;
 }
 
 .port-block1 {
@@ -162,9 +208,9 @@ header {
   background-color: #E7D2B7;
 }
 
-.port-block1:hover {
-  -webkit-transform: scale(1.01);
-  transform: scale(1.01);
+.port-block1 img:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .port-block1 > h2 {
@@ -201,9 +247,9 @@ header {
   text-decoration: solid underline #485D25 3px;
 }
 
-.port-block2:hover {
-  -webkit-transform: scale(1.01);
-  transform: scale(1.01);
+.port-block2 img:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .port-block2 > h2 {
@@ -240,9 +286,9 @@ header {
   text-decoration: solid underline #485D25 3px;
 }
 
-.port-block3:hover {
-  -webkit-transform: scale(1.01);
-  transform: scale(1.01);
+.port-block3 img:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .port-block3 > h2 {
@@ -279,9 +325,9 @@ header {
   text-decoration: solid underline #485D25 3px;
 }
 
-.port-block4:hover {
-  -webkit-transform: scale(1.01);
-  transform: scale(1.01);
+.port-block4 img:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .port-block4 > h2 {
@@ -318,9 +364,9 @@ header {
   text-decoration: solid underline #485D25 3px;
 }
 
-.port-block5:hover {
-  -webkit-transform: scale(1.01);
-  transform: scale(1.01);
+.port-block5 img:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .port-block5 > h2 {
@@ -355,6 +401,14 @@ header {
   color: #485D25 !important;
   font-weight: bolder;
   text-decoration: solid underline #485D25 3px;
+}
+
+@media (max-width: 850px) {
+
+  .port-block6 {
+    display: none;
+  }
+
 }
 
 .description {
@@ -409,6 +463,22 @@ header {
   background-color: rgb(238, 238, 238);
 }
 
+@media (max-width: 750px) {
+
+  .certificates {
+    padding: 100px 40px;
+  }
+  
+  .badge {
+    padding: 40px 5px;
+  }
+
+  .badge h2 {
+    font-size: 1.5rem;
+  }
+
+}
+
 .cert-descr {
   margin: 30px 0;
   font-size: 1rem;
@@ -427,12 +497,28 @@ header {
 
 footer {
   display: grid;
-  grid-template-columns: 70% 10% 10%;
-  padding: 300px 30% 150px;
+  grid-template-columns: 1fr;
+  padding: 250px 0 150px;
   text-align: center;
-  color: white;
   background-color: rgba(169, 169, 169, 0.315);
 }
 
+.footer-icons {
+  display: inline-flex;
+  gap: 20px;
+  /* display: flex; */
+  justify-content: center;
+  /* margin-right: 20px; */
+  margin-top: 20px;
+}
 
+@media (max-width: 750px) {
 
+  footer {
+    padding: 180px 0 100px;
+  }
+
+  .text-gradient {
+    font-size: 2.6rem;
+
+}
